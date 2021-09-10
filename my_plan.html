@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>My_Plan</title>
+</head>
+
+<body>
+
+    <!-- nav   -->
+    <nav class="nav-container">
+
+        <div class="logo">
+            <a href="./start2.php">
+                <h3> My Plan </h3>
+            </a>
+
+        </div>
+
+        <div class=nav-item>
+            <a href="start.html"></span> Home</a>
+            <a href="contact/contact.html">Contact</a>
+            <a href=".#">Sign out</a>
+            <a href="start-now.html"><button class="start-now">Reset</button></a>
+
+
+        </div>
+
+    </nav>
+    <nav class="nav-container2">
+
+        <div class="logo">
+            <a href="./start.php">
+                <h3> My_Plan </h3>
+            </a>
+
+        </div>
+
+        <div class="burger-menu">
+
+            <img src="image/list.svg" width="100%" onclick="document.getElementById('close').style.display = 'block'">
+        </div>
+
+
+
+    </nav>
+
+    <div class=nav-menu id="close">
+        <div class="burger-menu marg-img">
+
+            <img src="image/close.svg" width="100%" onclick="document.getElementById('close').style.display = 'none'">
+        </div>
+
+        <a class="item-menu item-menu-mrg" href="start.html"></span> Home</a><br>
+        <hr><br>
+        <a class="item-menu item-menu-mrg" href="contact/contact.html">Contact</a><br>
+        <hr><br>
+        <a class="item-menu item-menu-mrg" href="#">Sign_out</a>
+        <hr><br>
+        <a class="item-menu item-menu-mrg" href="start-now.html">Reset</a>
+        <hr>
+
+    </div>
+
+
+
+    <div id="my_p">
+        <input class="backgr_B" type="button" value="" onclick="document.getElementById('my_p').style.backgroundColor = 'lightblue'">
+        <input class="backgr_Y" type="button" value="" onclick="document.getElementById('my_p').style.backgroundColor = 'gold'">
+        <input class="backgr_G" type="button" value="" onclick="document.getElementById('my_p').style.backgroundColor = 'gainsboro'">
+        <div class="n_strat">
+            <h2>
+                <?php  echo $resulte2['title_strategic'];?> </h2>
+        </div>
+        <div class="result">
+
+            <div class="per_inf">
+                <img class="acadmy-icon " src="image/personal-information.png ">
+                <div class="output ">
+
+                    <i class="out_info"><span>my name :</span> <span> <?php  echo $resulte1['fname'];?></i> </span><br>
+                    <i class="out_info"><span>my birthday :</span> <span> <?php  echo $resulte1['birthday'];?></i>
+                    </span><br>
+                    <i class="out_info"><span>my age :</span> <span> <?php  echo $resulte1['age'];?></i> </span><br>
+                    <i class="out_info"><span>my enviroment:</span> <span>
+                            <?php  echo $resulte2['my_environment'];?></i> </span><br>
+                    <i class="out_info"><span>my resources :</span> <span><?php  echo $resulte2['resources_success'];?>
+                    </i> </span><br>
+                    <i class="out_info"><span>my museum :</span> <span><?php  echo $resulte2['personal_museum'];?> </i>
+                    </span><br>
+
+                </div>
+
+            </div>
+            <div class="photo">
+                <img src="image/resulte.svg" alt="" class="img_result">
+            </div>
+        </div>
+
+        <div class=" info-cotainar ">
+            <div class="R_swot">
+                <img class="acadmy-icon " src="./image/message.png ">
+                <h2 class="Nside">my message</h2>
+                <p>
+                    <?php  echo $resulte1['message'];?>
+                </p>
+            </div>
+
+            <div class="R_swot">
+                <img class="acadmy-icon " src="./image/binoculars.png">
+                <h2 class="Nside"> my vision</h2>
+                <p>
+                    <?php  echo $resulte1['vision'];?>
+                </p>
+            </div>
+
+            <div class="R_swot">
+                <img class="acadmy-icon " src="./image/law.png ">
+                <h2 class="Nside"> my rule/ my value</h2>
+                <p>
+                    <?php  echo $resulte1['rule'];?>
+                </p>
+            </div>
+        </div>
+
+
+        <div class=" info-cotainar ">
+            <div class="R_swot">
+                <img class="acadmy-icon " src="image/swot.png ">
+                <h2 class="Nside">
+                    <?php echo $resulte3['n_side1'];?>
+                </h2>
+
+                <i class="s_range"><span>S </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['s_sum1'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['s_sum1'];?>/60</span> </i><br>
+                <i class="s_range"><span>W </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['w_sum1'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['w_sum1'];?>/60</span> </i><br>
+                <i class="s_range"><span>O </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['o_sum1'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['o_sum1'];?>/60</span> </i><br>
+                <i class="s_range"><span>T </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['t_sum1'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['t_sum1'];?>/60</span> </i><br><br>
+
+                <i><span class="Nside c">Type stratige :<br></span> <?php echo$type_stra1 ?> </i><br><br>
+                <i><span class="Nside c">Strategie analise :<br></span> <?php echo$analy_stra1?></i><br>
+
+
+            </div>
+
+            <div class="R_swot">
+                <img class="acadmy-icon " src="image/swot.png ">
+                <h2 class="Nside">
+                    <?php echo $resulte3['n_side2'];?>
+                </h2>
+
+                <i class="s_range"><span>S </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['s_sum2'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['s_sum2'];?>/60</span> </i><br>
+                <i class="s_range"><span>W </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['w_sum2'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['w_sum2'];?>/60</span> </i><br>
+                <i class="s_range"><span>O </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['o_sum2'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['o_sum2'];?>/60</span> </i><br>
+                <i class="s_range"><span>T </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['t_sum2'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['t_sum2'];?>/60</span> </i><br><br>
+
+                <i><span class="Nside c">Type stratige :<br></span> <?php echo $type_stra2 ?> </i><br><br>
+                <i><span class="Nside c">Strategie analise :<br></span> <?php echo$analy_stra2?> </i><br>
+
+
+            </div>
+
+            <div class="R_swot">
+                <img class="acadmy-icon " src="image/swot.png ">
+                <h2 class="Nside">
+                    <?php echo $resulte3['n_side3'];?>
+                </h2>
+
+                <i class="s_range"><span>S </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['s_sum3'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['s_sum3'];?>/60</span> </i><br>
+                <i class="s_range"><span>W </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['w_sum3'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['w_sum3'];?>/60</span> </i><br>
+                <i class="s_range"><span>O </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['o_sum3'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['o_sum3'];?>/60</span> </i><br>
+                <i class="s_range"><span>T </span> : <input type="range" min="0" max="60"
+                        value="<?php echo $resulte3['t_sum3'];?>"> <span
+                        class="mark_swot"><?php echo $resulte3['t_sum3'];?>/60</span> </i><br><br>
+
+                <i><span class="Nside c">Type stratige :<br></span> <?php echo$type_stra3 ?> </i><br><br>
+                <i><span class="Nside c">Strategie analise :<br></span> <?php echo$analy_stra3?> </i><br>
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class=" info-cotainar ">
+            <div class="R_swot">
+                <img class="acadmy-icon " src="./image/targ.png ">
+                <h2 class="Nside">
+                    <?php echo $resulte4['n_target1'];?>
+                </h2>
+
+                <i><span>imp </span> : <input type="range" min="0" max="10" value="<?php echo $resulte4['num_imp1'];?>">
+                    <span class="mark_swot"><?php echo $resulte4['num_imp1'];?>/10</span> </i><br>
+                <i><span>opp </span> : <input type="range" min="0" max="10" value="<?php echo $resulte4['num_opp1'];?>">
+                    <span class="mark_swot"><?php echo $resulte4['num_opp1'];?>/10</span> </i><br><br>
+
+                <i><span>Start step : </span><br> <?php echo $resulte4['first_step1'];?></i><br><br>
+                <i><span>Start : </span><br> <?php echo $resulte4['start1'];?></i><br><br>
+                <i><span>end : </span><br> <?php echo $resulte4['end1'];?> </i><br><br>
+                <i><span>Type stratige : </span><br> <?php echo"$analy_i_o1"?> </i><br><br>
+
+
+
+            </div>
+
+            <div class="R_swot">
+                <img class="acadmy-icon " src="./image/targ.png ">
+                <h2 class="Nside">
+                    <?php echo $resulte4['n_target2'];?>
+                </h2>
+
+                <i><span>imp </span> : <input type="range" min="0" max="10" value="<?php echo $resulte4['num_imp2'];?>">
+                    <span class="mark_swot"><?php echo $resulte4['num_imp2'];?>/10</span> </i><br>
+                <i><span>opp </span> : <input type="range" min="0" max="10" value="<?php echo $resulte4['num_opp2'];?>">
+                    <span class="mark_swot"><?php echo $resulte4['num_opp2'];?>/10</span> </i><br><br>
+
+                <i><span>Start step : </span><br> <?php echo $resulte4['first_step2'];?></i><br><br>
+                <i><span>Start : </span><br> <?php echo $resulte4['start2'];?></i><br><br>
+                <i><span>end : </span><br> <?php echo $resulte4['end2'];?> </i><br><br>
+                <i><span>Type stratige : </span><br> <?php echo"$analy_i_o2"?> </i><br><br>
+
+
+
+            </div>
+
+
+            <div class="R_swot">
+                <img class="acadmy-icon " src="./image/targ.png ">
+                <h2 class="Nside">
+                    <?php echo $resulte4['n_target3'];?>
+                </h2>
+
+                <i><span>imp </span> : <input type="range" min="0" max="10" value="<?php echo $resulte4['num_imp3'];?>">
+                    <span class="mark_swot"><?php echo $resulte4['num_imp3'];?>/10</span> </i><br>
+                <i><span>opp </span> : <input type="range" min="0" max="10" value="<?php echo $resulte4['num_opp3'];?>">
+                    <span class="mark_swot"><?php echo $resulte4['num_opp3'];?>/10</span> </i><br><br>
+
+                <i><span>Start step : </span><br> <?php echo $resulte4['first_step3'];?></i><br><br>
+                <i><span>Start : </span><br> <?php echo $resulte4['start3'];?></i><br><br>
+                <i><span>end : </span><br> <?php echo $resulte4['end3'];?> </i><br><br>
+                <i><span>Type stratige : </span><br> <?php echo"$analy_i_o3"?> </i><br><br>
+
+
+
+            </div>
+
+
+        </div>
+
+</body>
+
+</html>

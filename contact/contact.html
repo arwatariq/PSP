@@ -1,0 +1,101 @@
+<?php
+
+if (isset($_POST['sent'])){
+$Uname=$_POST['uname'];
+$email=$_POST['email'];
+$phone=$_POST['phone'] ;
+$message=$_POST['message'];
+
+mail("arwatariq22@gmail.com","arwa",$message,"arwa");
+}
+
+?>
+
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My_Plan</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Welcome</h3>
+                <p class="text">
+                    You can contact me at any time to inquire. I'm Arwa Tariq, the site's programmer.
+                </p>
+
+                <div class="info">
+                    <div class="information">
+                        <img src="img/location.png" class="icon" alt="" />
+                        <p>Iraq ,Anbar ,Ramadi</p>
+                    </div>
+                    <div class="information">
+                        <img src="img/email.png" class="icon" alt="" />
+                        <p>arwatariq22@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <p>Connect with me :</p>
+                    <div class="social-icons">
+                        <a href="https://t.me/ar95ta">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/p/CEpOmCbgJwox7v1B9V-zwpx99gUA85BjdPy2u40/?igshid=63px9iuafc54">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/arwatariq22">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                 
+            </div>
+
+            <div class="contact-form">
+                <form action="" method="POST">
+                    <h3 class="title">Contact us</h3>
+                    <div class="input-container">
+                        <input type="text" name="uname" class="input" />
+                        <label for="">Username</label>
+                        <span>Username</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" />
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input" />
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                    </div>
+                    <div class="input-container textarea">
+                        <textarea name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+                    <input type="submit" value="Send" name="sent" class="btn" />
+                   
+                   
+                </form>
+
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
